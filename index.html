@@ -24,7 +24,30 @@
 </head>
 <body>
 
-  {
+  
+  <!-- Display the map and title with HTML division tags  -->
+  <div id="map-title">South Korea Population 2015fff</div>
+  <div id="map"></div>
+
+  <!-- Create the map content with JavaScript (.js) -->
+   <script type="text/javascript" src="./js/states.js"></script>
+  <script>
+  
+
+  /* Set up the map with initial center and zoom level */
+  var map = L.map('map', {
+    center: [36.25, 127.76], // EDIT latitude, longitude to re-center map
+    zoom: 7,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
+    scrollWheelZoom: true
+  });
+
+  /* Control panel to display map layers */
+  // var controlLayers = L.control.layers( null, null, {
+  //  position: "topright",
+  //  collapsed: false
+  // }).addTo(map);
+
+    VAR{
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
@@ -46,29 +69,7 @@
 { "type": "Feature", "properties": { "OBJECTID": 16, "TITLE": "Incheon City", "VISIBLE": 1, "DESCRIPTIO": "<p>Change in Registered Foreigner Population, 1992 to 2012: fromÂ 4,750 to 47,305 <b><font style='background-color: rgb(128, 128, 128);'>(996% increase)<\/font><\/b><\/p><p><\/p><p>Change in Under-15 Population, 1995 to 2010: from 591,008 to 437,184 <b><font", "IMAGE_URL": null, "IMAGE_LINK": null, "DATE": null, "TYPEID": 0, "FillTransp": 49.803921568600003, "OutlineTra": 0.0, "SHAPE_Leng": 168784.26939500001, "SHAPE_Area": 1458004143.0, "Pop": 2890451 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 126.60592408002289, 37.552332421961609 ], [ 126.60555577075638, 37.552261203762868 ], [ 126.60657985018028, 37.552538954353111 ], [ 126.60592408002289, 37.552332421961609 ] ] ], [ [ [ 126.60592408002289, 37.552332421961609 ], [ 126.63370897176068, 37.557709199428992 ], [ 126.64743522930203, 37.565869765335172 ], [ 126.6604877503803, 37.568596875593904 ], [ 126.70374163131065, 37.568867445057585 ], [ 126.73927898395041, 37.572128441807472 ], [ 126.75335558445258, 37.569679147551383 ], [ 126.7543886470293, 37.559475261554994 ], [ 126.74803755797059, 37.551036240092529 ], [ 126.75249320177983, 37.531163378025965 ], [ 126.75181048216388, 37.523818338531406 ], [ 126.74614211272109, 37.497395865983108 ], [ 126.74768721500979, 37.485143439984277 ], [ 126.77223817172477, 37.47492085594655 ], [ 126.78098776259209, 37.47492085594655 ], [ 126.78528170965019, 37.478734884531043 ], [ 126.78974633661227, 37.4799610355483 ], [ 126.7892342969003, 37.475605256714545 ], [ 126.80261919463369, 37.461160219317485 ], [ 126.79317790099761, 37.451347980455985 ], [ 126.79197415851688, 37.444537130569884 ], [ 126.77549905620612, 37.429679481770016 ], [ 126.75729918854985, 37.423544402605273 ], [ 126.75420898397248, 37.408547011733738 ], [ 126.7207377564862, 37.378407592183365 ], [ 126.69601611986722, 37.359852586504488 ], [ 126.68176883946107, 37.331329332340573 ], [ 126.68176883946107, 37.310990794612515 ], [ 126.63971870101145, 37.267695044638309 ], [ 126.59679719673623, 37.28094799066276 ], [ 126.58976338806156, 37.309490368387699 ], [ 126.40471043953293, 37.362858537599692 ], [ 126.29622090266983, 37.499170483547815 ], [ 126.30651559582584, 37.565058021328788 ], [ 126.46857167308102, 37.545459552200271 ], [ 126.56538311125057, 37.540017784087738 ], [ 126.60592408002289, 37.552332421961609 ] ] ] ] } }
 ]
 }
-  
-  <!-- Display the map and title with HTML division tags  -->
-  <div id="map-title">South Korea Population 2015</div>
-  <div id="map"></div>
-
-  <!-- Create the map content with JavaScript (.js) -->
-   <script type="text/javascript" src="./js/states.js"></script>
-  <script>
-  
-
-  /* Set up the map with initial center and zoom level */
-  var map = L.map('map', {
-    center: [36.25, 127.76], // EDIT latitude, longitude to re-center map
-    zoom: 7,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
-    scrollWheelZoom: true
-  });
-
-  /* Control panel to display map layers */
-  // var controlLayers = L.control.layers( null, null, {
-  //  position: "topright",
-  //  collapsed: false
-  // }).addTo(map);
-
+    
   /* Carto light-gray basemap tiles with labels */
   var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
